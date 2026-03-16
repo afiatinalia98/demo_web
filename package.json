@@ -4,16 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/registTest.js"
+    "test": "npx mocha tests/registTest.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "mocha": "^11.7.5",
     "selenium-webdriver": "^4.41.0"
-  },
-  "dependencies": {
-    "mocha": "^11.7.5"
   }
 }
