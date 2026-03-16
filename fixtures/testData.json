@@ -1,0 +1,15 @@
+{
+    "baseUrl": "https://demowebshop.tricentis.com/",
+    "validRegistCred": {
+        "firstName": "sendy",
+        "lastName": "Jung",
+        "email":"sendy.jung@gmail.com",
+        "password": "jessiecutie123!",
+        "confirmPass" : "jessiecutie123!"
+    },
+    "assertRegist": "Your registration completed",
+    "registError": "Text 'Your registration completed' doesnt appear",
+    "message": {
+        "successLogin": "Your registration completed"
+    }
+}
