@@ -7,6 +7,20 @@
         "password": "jessiecutie123!",
         "confirmPass" : "jessiecutie123!"
     },
+    "validLoginCred":{
+        "email": "stella.marine@gmail.com",
+        "password": "stella123!"
+    },
+    "invalidLoginEmail":{
+        "email": "erroremail@gmail.com"
+    },
+    "invalidLoginPass":{
+        "password": "errorPassword"
+    },
+    "errorCredential": "Login was unsuccessful. Please correct the errors and try again.",
+    "validLogin": "This text 'Login was unsuccessful. Please correct the errors and try again.' is not visible",
+    "assertLogin":"stella.marine@gmail.com",
+    "loginError": "Email 'stella.marine@gmail.com' is not visible",
     "assertRegist": "Your registration completed",
     "registError": "Text 'Your registration completed' doesnt appear",
     "message": {
