@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha tests/registTest.js"
+    "test": "mocha tests/homeTest.js"
   },
   "keywords": [],
   "author": "",

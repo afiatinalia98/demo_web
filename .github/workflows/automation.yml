@@ -26,4 +26,4 @@ jobs:
         run: npm install mocha --save-dev
 
       - name: Run automation test
-        run: npx --yes mocha tests/homeTest.js
+        run: npm test
