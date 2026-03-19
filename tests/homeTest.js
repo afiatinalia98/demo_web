@@ -5,14 +5,14 @@ const {
     until
 } = require("selenium-webdriver")
 const assert = require("assert")
-const chrome = require ("selenium-webdriver/chrome")
+const chrome = require("selenium-webdriver/chrome")
 const testData = require("../fixtures/testData.json")
 const LoginPage = require("../pages/loginPage")
 const HomePage = require("../pages/homePage")
 
 async function HomeTest() {
 
-    
+
 
     describe("Homepage Test Suites", function () {
         let driver;
@@ -51,14 +51,14 @@ async function HomeTest() {
         //     await homePage.verifyEmptySearch(testData.productTitle.itemEmpty, testData.errorSearch)
         // })
 
-        it("Adding single product to cart", async function(){
+        it("Adding single product to cart", async function () {
             await homePage.addToCartSingle()
 
             //assertion
             await homePage.verifySuccessAddToCart(testData.successAddToCart, testData.message.failedAddToCart)
         })
 
-        it("Adding multiple product to cart", async function(){
+        it("Adding multiple product to cart", async function () {
             await homePage.addToCartMultiple()
 
             //assertion
@@ -66,8 +66,10 @@ async function HomeTest() {
         })
 
         afterEach(async function () {
-            await driver.quit()
-        })
+            if (driver) {
+                await driver.quit();
+            }
+        });
     })
 }
 
