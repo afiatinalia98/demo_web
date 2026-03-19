@@ -26,4 +26,4 @@ jobs:
           sudo apt install -y google-chrome-stable
 
       - name: Run test
-        run: ./node_modules/.bin/mocha tests/homeTest.js
+        run: node node_modules/mocha/bin/mocha tests/homeTest.js
