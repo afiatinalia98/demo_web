@@ -5,11 +5,15 @@ const {
     until
 } = require("selenium-webdriver")
 const assert = require("assert")
+const chrome = require ("selenium-webdriver/chrome")
 const testData = require("../fixtures/testData.json")
 const LoginPage = require("../pages/loginPage")
 const HomePage = require("../pages/homePage")
 
 async function HomeTest() {
+
+    
+
     describe("Homepage Test Suites", function () {
         let driver;
         this.timeout(120000)
@@ -18,7 +22,13 @@ async function HomeTest() {
         let homePage;
 
         beforeEach(async function () {
-            driver = await new Builder().forBrowser(browserName).build()
+
+            let options = new chrome.Options();
+            options.addArguments("--headless=new");
+
+            driver = await new Builder().forBrowser(browserName).setChromeOptions(options).build();
+
+            // driver = await new Builder().forBrowser(browserName).build()
 
             loginPage = new LoginPage(driver);
             homePage = new HomePage(driver);
