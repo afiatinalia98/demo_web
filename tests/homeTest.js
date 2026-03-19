@@ -30,8 +30,8 @@ async function HomeTest() {
                 "--disable-dev-shm-usage",
                 "--disable-gpu"
             );
-
-            driver = await new Builder().forBrowser(browserName).setChromeOptions(options).build();
+            const service = new chrome.ServiceBuilder("/usr/bin/chromedriver");
+            driver = await new Builder().forBrowser(browserName).setChromeOptions(options).setChromeService(service).build();
 
             // driver = await new Builder().forBrowser(browserName).build()
 
