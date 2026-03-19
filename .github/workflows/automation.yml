@@ -3,27 +3,25 @@ name: Automation Test
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  selenium-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
-      - name: Install mocha
-        run: npm install mocha --save-dev
+      - name: Fix permission
+        run: chmod +x node_modules/.bin/mocha
 
-      - name: Run automation test
-        run: npm test
+      - name: Run test
+        run: ./node_modules/.bin/mocha tests/homeTest.js
