@@ -23,7 +23,20 @@
     "loginError": "Email 'stella.marine@gmail.com' is not visible",
     "assertRegist": "Your registration completed",
     "registError": "Text 'Your registration completed' doesnt appear",
+    "successAddToCart": "The product has been added to your ",
+    "productEmpty": "Out of stock",
     "message": {
-        "successLogin": "Your registration completed"
-    }
+        "successLogin": "Your registration completed",
+        "failedAddToCart": "Cannot add product to cart"
+    },
+    "search": {
+        "keyword1": "Computer",
+        "invalidKeyword": "iPhone 17 Promax"
+    },
+    "productTitle": {
+        "item1": "Build your own expensive computer",
+        "item2": "Simple Computer",
+        "itemEmpty": "No products were found that matched your criteria."
+    },
+    "errorSearch": "Product not found"
 }
