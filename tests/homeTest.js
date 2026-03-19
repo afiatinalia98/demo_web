@@ -24,7 +24,12 @@ async function HomeTest() {
         beforeEach(async function () {
 
             let options = new chrome.Options();
-            options.addArguments("--headless=new");
+            options.addArguments(
+                "--headless=new",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu"
+            );
 
             driver = await new Builder().forBrowser(browserName).setChromeOptions(options).build();
 
